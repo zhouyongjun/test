@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!--
+		telnet:
+			end_sign:命令结束表示或开始 
+		cmd：执行命令配置
+			name:命令名称
+			cmd:命令
+			split:分隔符
+			
+			param:参数配置
+				name:参数名称
+				default_value：参数默认值	
+	-->
+<cmds>
+	<telnet end_sign="please input command:" db_sever_name="server_telnet"/>
+	 <cmd name="名字查询ID" cmd="testfindIdbyName" split=",">
+	 	<type name="玩家ID" />
+	 	<type name="道具ID" />
+	 	<type name="装备ID" />
+	 	<type name="任务ID" />
+	 	<type name="副将ID" />
+	 	<type name="宠物ID" />
+	 	<type name="机甲ID" />
+	 	<type name="公会ID" />
+	 	<type name="场景英文名" />
+	 	<type name="关卡ID" />
+	 	<type name="人物属性" />
+		<param name="输入：" default_value="" />
+		<param name="结果：" default_value="" />
+	</cmd>
+	
+	<cmd name="查看系统时间" cmd="testshowsysdate" split="" />
+	
+	<cmd name="设置连续登陆天数:" cmd="testmodifycontinuelogin" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="连续登陆的天数：" default_value="1" />
+	</cmd>	
+	<cmd name="公会远征排名上限" cmd="testmodifyguildexpedrank" split=",">
+		<param name="排名上限：" default_value="20" />
+	</cmd>
+	<cmd name="修改好友上限" cmd="testmodifyfriendtop" split=",">
+		<param name="好友及申请：" default_value="50" />
+		<param name="黑名单：" default_value="50" />
+		<param name="推荐：" default_value="8" />
+	</cmd>
+	<cmd name="机器人战斗力查询" cmd="testrobotfightscoreview" split=",">
+		<param name="机器人ID：" default_value="" />
+		<param name="结果：" default_value="" />
+	</cmd>
+	<cmd name="玩家增加属性查询" cmd="testaddattrsview" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="结果：" default_value="" />
+	</cmd>
+	<cmd name="离线时间查询" cmd="testfindleavetime" split=",">
+		<param name="输入名字：" default_value="" />
+		<param name="结果：" default_value="" />
+	</cmd>
+	<cmd name="擂台赛报名" cmd="testentermatch" split=",">
+		<param name="玩家ID：" default_value="" />
+	</cmd>
+	<cmd name="设置离线时间" cmd="testsetlastleavetime" split=",">
+		<param name="输入ID：" default_value="" />
+		<param name="时间：" default_value="格式:2016-04-01 12:00:00" />
+	</cmd>
+	<cmd name="增加金钱" cmd="testaddmoney" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="增加金币:" default_value="10000" />
+	</cmd>
+	<cmd name="增加擂台币" cmd="testaddmatchcoin" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="增加擂台币:" default_value="10000" />
+	</cmd>
+	<cmd name="增加贡献" cmd="testadddonate" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="增加贡献:" default_value="10000" />
+	</cmd>
+	<cmd name="清空金钱" cmd="testclearmoney" split=",">
+		<param name="玩家ID：" default_value="" />
+	</cmd>
+	<cmd name="增加资源" cmd="testaddbaseresource" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="增加资源:" default_value="10000" />
+	</cmd>
+	<cmd name="增加元宝" cmd="testaddgold" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="增加元宝:" default_value="10000" />
+	</cmd>
+	<cmd name="增加经验" cmd="testaddexp" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="增加经验值：" default_value="1" />
+	</cmd>
+	<cmd name="增加竞技场荣誉" cmd="testaddarenahonor" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="增加荣誉:" default_value="10000" />
+	</cmd>
+	<cmd name="增加体力" cmd="testaddenergy" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="增加值：" default_value="1" />
+	</cmd>
+	<cmd name="增加荣誉" cmd="testaddarenahonor" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="增加值：" default_value="1" />
+	</cmd>
+	<cmd name="体力增值次数减去" cmd="testsetenergynaturenum" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="减少值：" default_value="1" />
+		<param name="增长分钟：" default_value="5" />
+	</cmd>
+	<cmd name="提升等级" cmd="testsetlevel" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="指定等级：" default_value="" />
+	</cmd>
+	<cmd name="设置VIP等级" cmd="testsetviplevel" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="指定VIP等级：" default_value="" />
+	</cmd>
+	<cmd name="充值" cmd="testclientcharge" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="充值元宝:" default_value="100" />
+	</cmd>
+	<cmd name="清空充值" cmd="testclearcharge" split=",">
+		<param name="玩家ID：" default_value="" />
+	</cmd>
+	<cmd name="增加装备" cmd="testaddspequip" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="装备ID：" default_value="1" />
+		<param name="增加数量：" default_value="1" />
+	</cmd>
+	<cmd name="增加道具" cmd="testaddspgood" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="道具ID：" default_value="1" />
+		<param name="增加数量：" default_value="1" />
+	</cmd>
+	<cmd name="增加个人仓库道具" cmd="testfufilguildbag" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="道具ID：" default_value="1" />
+		<param name="增加数量：" default_value="1" />
+	</cmd>
+	<cmd name="填满背包TAG物品" cmd="testaddbagtag" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="TAB页：" default_value="从0开始，比如0代表消耗" />
+	</cmd>
+	<cmd name="清空背包" cmd="testbagclear" split=",">
+		<param name="玩家ID：" default_value="" />
+	</cmd>
+	<cmd name="清空公会背包" cmd="testguildbagclear" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="1个人0公会：" default_value="" />
+	</cmd>
+	
+	<cmd name="清空强化等级" cmd="testinitstrenth" split=",">
+		<param name="玩家ID：" default_value="" />
+	</cmd>
+	<cmd name="增加钻石兑换元宝次数" cmd="testaddexchangemoney" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="增加次数：" default_value="99" />
+	</cmd>
+	
+	<cmd name="清空体力购买次数" cmd="testdailyenerty" split=",">
+		<param name="玩家ID：" default_value="" />
+	</cmd>
+	<cmd name="增加枪械" cmd="testaddgun" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="枪械ID：" default_value="" />
+	</cmd>
+	<cmd name="增加枪械星级" cmd="testupdgunstar" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="枪械ID：" default_value="" />
+		<param name="品质：" default_value="1" />
+		<param name="等级：" default_value="1" />
+	</cmd>
+	
+	<cmd name="增加玩家属性组1" cmd="testaddeffs,0" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="血量：" default_value="0" />
+		<param name="攻击：" default_value="0" />
+		<param name="防御：" default_value="0" />
+		<param name="破防：" default_value="0" />
+		<param name="移度：" default_value="0" />
+		<param name="射速：" default_value="0" />
+	</cmd>
+	<cmd name="增加玩家属性组2" cmd="testaddeffs,1" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="射程：" default_value="0" />
+		<param name="暴击：" default_value="0" />
+		<param name="韧性：" default_value="0" />
+		<param name="暴伤：" default_value="0" />
+		<param name="闪避：" default_value="0" />
+		<param name="命中：" default_value="0" />
+		</cmd>
+	<cmd name="增加玩家属性组3" cmd="testaddeffs,2" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="恢复：" default_value="0" />
+		<param name="体魄：" default_value="0" />
+		<param name="缓冲：" default_value="0" />
+		<param name="弹夹：" default_value="0" />
+		<param name="重量：" default_value="0" />
+		<param name="填弹：" default_value="0" />
+		<param name="加速：" default_value="0" />
+		</cmd>
+		<cmd name="清除玩家调试属性" cmd="testcleareffs" split=",">
+		<param name="玩家ID：" default_value="" />
+	</cmd>
+	<cmd name="完成主线任务" cmd="testcompmainquest" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="任务ID：" default_value="" />
+	</cmd>
+	<cmd name="接受主线任务" cmd="testacceptmainquest" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="任务ID：" default_value="" />
+	</cmd>
+	<cmd name="放弃任务" cmd="testcancelquest" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="任务ID：" default_value="" />
+	</cmd>
+	<cmd name="刷新日常任务" cmd="testacceptdailyquest" split=",">
+		<param name="玩家ID：" default_value="" />
+	</cmd>
+	<cmd name="清空任务" cmd="testrefreshquest" split=",">
+		<param name="玩家ID：" default_value="" />
+	</cmd>
+	<cmd name="获得称号" cmd="testaddtitle" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="称号ID：" default_value="" />
+	</cmd>
+	<cmd name="获得时装" cmd="testaddfashion" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="时装ID：" default_value="填写0可增加所有" />
+	</cmd>
+	<cmd name="获得魔核" cmd="testaddesoterica" split=",">
+	<param name="玩家ID：" default_value="" />
+	<param name="魔核ID：" default_value="填写0可增加所有" />
+	</cmd>
+	<cmd name="获得宠物" cmd="testaddpet" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="宠物ID：" default_value="" />
+	</cmd>
+  	<cmd name="获得机甲" cmd="testopenmecha" split=",">
+   		<param name="玩家ID:" default_value="" />
+		<param name="机甲ID:" default_value="" />
+	</cmd>
+		<cmd name="关闭勋章" cmd="testclosemedal" split=",">
+   		<param name="玩家ID:" default_value="" />
+	</cmd>
+	<cmd name="增加伙伴" cmd="testaddlieut" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="伙伴ID：" default_value="" />
+	</cmd>
+	<cmd name="设置伙伴等级" cmd="testsetlieutlevel" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="伙伴ID：" default_value="" />
+		<param name="设置的等级：" default_value="" />
+	</cmd>
+	<cmd name="清空伙伴升级数据" cmd="testclearlieutexp" split=",">
+		<param name="玩家ID：" default_value="" />
+	</cmd>
+	<cmd name="清空伙伴升阶" cmd="testclearlieutstage" split=",">
+		<param name="玩家ID：" default_value="" />
+	</cmd>
+	<cmd name="上阵指定ID得伙伴" cmd="testchangelieut" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="伙伴ID：" default_value="" />
+	</cmd>
+	<cmd name="增加伙伴属性组1" cmd="testaddhuobaneffs,0" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="伙伴ID：" default_value="" />
+		<param name="血量：" default_value="0" />
+		<param name="攻击：" default_value="0" />
+		<param name="防御：" default_value="0" />
+		<param name="破防：" default_value="0" />
+		<param name="移度：" default_value="0" />
+		<param name="射速：" default_value="0" />
+	</cmd>
+	<cmd name="增加伙伴属性组2" cmd="testaddhuobaneffs,1" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="伙伴ID：" default_value="" />
+		<param name="射程：" default_value="0" />
+		<param name="暴击：" default_value="0" />
+		<param name="韧性：" default_value="0" />
+		<param name="暴伤：" default_value="0" />
+		<param name="闪避：" default_value="0" />
+		<param name="命中：" default_value="0" />
+		</cmd>
+	<cmd name="增加伙伴属性组3" cmd="testaddhuobaneffs,2" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="伙伴ID：" default_value="" />
+		<param name="恢复：" default_value="0" />
+		<param name="体魄：" default_value="0" />
+		<param name="缓冲：" default_value="0" />
+		<param name="弹夹：" default_value="0" />
+		<param name="重量：" default_value="0" />
+		<param name="填弹：" default_value="0" />
+		<param name="加速：" default_value="0" />
+	</cmd>
+	<cmd name="开启所有技能" cmd="testopenallskills" split=",">
+		<param name="玩家ID：" default_value="" />
+	</cmd>
+	<cmd name="开启关卡" cmd="testopenallcopylevel" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="星级：" default_value="3" />
+		<param name="关卡ID：" default_value="《=0代表开启所有关卡" />
+	</cmd>
+	
+	<cmd name="清除关卡" cmd="testcloseallcopylevel" split=",">
+		<param name="玩家ID：" default_value="" />
+	</cmd>
+	<cmd name="开启指定章节关卡" cmd="testchapterthrough" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="章节ID：" default_value="" />
+		<param name="难度：" default_value="0" />
+	</cmd>
+	<cmd name="开启关卡怪物掉落" cmd="testcopyunitmonsterdrop" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="是否必掉：" default_value="1表示必掉" />
+	</cmd>
+	<cmd name="开启所有UI按钮" cmd="testopenallclientbutton" split=",">
+		<param name="玩家ID：" default_value="" />
+	</cmd>
+	<cmd name="开启当前版本UI按钮" cmd="testopennowversionallclientbutton" split=",">
+		<param name="玩家ID：" default_value="" />
+	</cmd>
+	<cmd name="切关" cmd="testchangescene" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="场景中文名：" default_value="" />
+	</cmd>
+	<cmd name="进入单机活动副本" cmd="testchangescene" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="场景中文名：" default_value="" />
+	</cmd>
+	<cmd name="发送系统消息" cmd="testsendsyschat" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="频道：" default_value="(从0开始)" />
+		<param name="内容：" default_value="测试。。。" />
+	</cmd>
+	<cmd name="发送滚屏消息" cmd="testsendsysnotice" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="次数：" default_value="1" />
+		<param name="内容：" default_value="测试。。。" />
+	</cmd>
+	<cmd name="创建时间修改" cmd="testsetplayercreatetime" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="指定创建时间：" default_value="2016-02-26 00:11:22" />
+	</cmd>
+	<cmd name="登录时间修改" cmd="testsetplayerlogin" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="指定登录时间：" default_value="2016-02-26 00:11:22" />
+	</cmd>
+	<cmd name="天首次登录时间" cmd="testsetplayertodayfirstlogin" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="指定登录时间：" default_value="2016-02-26 00:11:22" />
+	</cmd>
+	<cmd name="进入副本" cmd="testentercopy" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="关卡ID：" default_value="" />
+	</cmd>
+	<cmd name="踢下线" cmd="kill" split=" ">
+		<param name="玩家ID：" default_value="" />
+	</cmd>
+	
+	<cmd name="增加公会经验" cmd="testaddguildexp" split=",">
+		<param name="公会ID：" default_value="" />
+		<param name="增加经验值：" default_value="1" />
+	</cmd>
+	<cmd name="刷新公会活动" cmd="testrefreshguildboss" split=",">
+		<param name="公会ID:" default_value="" />
+	</cmd>
+	<cmd name="公会远征开启下一级难度" cmd="testguildexped,opendegree" split=",">
+		<param name="公会ID(是ID):" default_value="" />
+	</cmd>
+	<cmd name="公会远征刷新" cmd="testguildexped,daily" split=",">
+		<param name="公会ID(是ID):" default_value="" />
+	</cmd>
+	<cmd name="公会远征重置" cmd="testguildexped,weekly" split=",">
+		<param name="公会ID(是ID):" default_value="" />
+	</cmd>
+	<cmd name="公会远征当前通关" cmd="testguildexped,killboss" split=",">
+		<param name="公会ID(是ID):" default_value="" />
+	</cmd>
+	<cmd name="公会远征选择难度" cmd="testguildexped,openexped" split=",">
+		<param name="公会ID(是ID):" default_value="" />
+		<param name="会长ID:" default_value="" />
+		<param name="选择难度:" default_value="在0-2之间选择已开启的难度" />
+	</cmd>
+	<cmd name="公会远征清除首杀" cmd="testclearpveguildboss,serverkill" split="," />
+	<cmd name="公会远征清除全服排行" cmd="testclearpveguildboss,serverrecord" split="," />
+ 	<cmd name="发送系统邮件" cmd="testsendsysmail" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="道具ID：" default_value="1" />
+		<param name="道具数量：：" default_value="1" />
+	</cmd>
+	<cmd name="设置邮件上限" cmd="testmailsettop" split=",">
+		<param name="收件箱：" default_value="5" />
+		<param name="系统邮件：" default_value="5" />
+		<param name="发件箱：" default_value="5" />
+	</cmd>
+	<cmd name="设置友情体力" cmd="testpostfriend" split=",">
+		<param name="领取体力次数：" default_value="20" />
+		<param name="消耗自己体力点：" default_value="120" />
+		<param name="增加好友体力点：" default_value="3" />
+	</cmd>
+	<cmd name="排行榜上线修改" cmd="testranksetmaxtop" split=",">
+		<param name="UI列表最大名次：" default_value="100" />
+		<param name="个人显示最大名次：" default_value="1000" />
+	</cmd>
+		<cmd name="排行榜刷新" cmd="testloadranks" split=",">
+		<param name="是否发送奖励：" default_value="(填1表示发送)" />
+	</cmd>
+	<cmd name="聊天组人数上限" cmd="testchatgroupmaxset" split=",">
+		<param name="最大上线：" default_value="50" />
+	</cmd>
+	<cmd name="单人公会BOSS测试进入" cmd="testenterpvesingleguildboss" split=",">
+   		<param name="玩家 ID:" default_value="" />
+	</cmd>
+	<cmd name="多人公会BOSS测试进入" cmd="testenterpvemultiguildboss" split=",">
+   		<param name="玩家1 ID:" default_value="" />
+		<param name="玩家2 ID:" default_value="" />
+		<param name="玩家3 ID:" default_value="" />
+	</cmd>
+	<cmd name="PVP大乱斗开启" cmd="testpvpdota,ready" split=",">
+   		<param name="准备等待时间(分钟):" default_value="1" />
+		<param name="开始等待时间(分钟)" default_value="3" />
+		<param name="结束等待时间(分钟)" default_value="13" />
+		<param name="战斗终止等待时间(分钟)" default_value="43" />
+	</cmd>
+	<cmd name="PVP擂台赛开启" cmd="testpvpmatch,ready" split=",">
+	    <param name="准备等待时间(分钟)" default_value="1" />
+   		<param name="开始等待时间(分钟)" default_value="2" />
+		<param name="结束等待时间(分钟)" default_value="13" />
+	</cmd>
+	<cmd name="PVP公会战开启" cmd="testpvpguildwar,ready" split=",">
+		<param name="准备等待时间(分钟)" default_value="1" />
+   	<param name="开始等待时间(分钟)" default_value="1" />
+   	<param name="阶段1(开始:结束)" default_value="1:5" />
+   	<param name="阶段2(开始:结束)" default_value="1:5" />
+   	<param name="阶段3(开始:结束)" default_value="1:5" />
+		<param name="指定公会ID(:分隔)" default_value="" />
+	</cmd>
+	<cmd name="血战排名奖励查看" cmd="testlookbloodwarreward" split=",">
+		<param name="名次：" default_value="1" />
+		<param name="结果：" default_value="" />
+	</cmd>
+	<cmd name="血战积分增加" cmd="testpvpbloodwar,addscore" split=",">
+		<param name="玩家ID：" default_value="" />
+		<param name="修改值：" default_value="100" />
+	</cmd>
+	<cmd name="pvp血战日奖励发送" cmd="testpvpbloodwar,dailyreward" split="," />
+	<cmd name="pvp血战周奖励发送" cmd="testpvpbloodwar,weekyreward" split="," />
+	
+	<cmd name="竞技场次数 和CD清空" cmd="testcleararenanum" split=",">
+   		<param name="名次：" default_value="" />
+	</cmd>
+	<cmd name="竞技场次数修改" cmd="testsetarenachallengenum" split=",">
+   		<param name="名次：" default_value="" />
+   		<param name="修改次数：" default_value="(大于0表示增加剩余次数，小于0表示减少剩余次数)" />
+	</cmd>
+	<cmd name="竞技场名次调换" cmd="testchangearenarank" split=",">
+   		<param name="调换前名次:" default_value="" />
+		<param name="调换后名次:" default_value="" />
+	</cmd>
+	<cmd name="竞技场每日奖励发送" cmd="testarenaidaily" split="," />
+	<cmd name="公会保存" cmd="testsaveguild" split=",">
+   		<param name="公会ID：" default_value="-1 全部保存" />
+	</cmd>	
+	<cmd name="限时抽奖" cmd="testtimeddraw" split=";">
+   		<param name="倒计时显示（单位秒）" default_value="0" />
+   		<param name="排名1" default_value="1,1" />
+   		<param name="排名2" default_value="2,5" />
+   		<param name="排名3" default_value="6,10" />
+   		<param name="排名4" default_value="11,20" />
+	</cmd>	
+	<cmd name="幸运转盘" cmd="testturntable" split=";">
+   		<param name="倒计时显示（单位秒）" default_value="0" />
+	</cmd>	
+	<cmd name="设置VIP登录" cmd="testjoylogin" split="," />
+	<cmd name="发送彩票奖励" cmd="testlotterycalc" split="," />
+	<cmd name="讨论组保存" cmd="savechatgroups" split="," />	
+	<cmd name="load服务器列表" cmd="loadservers" split=" " />
+	<cmd name="load游戏配置" cmd="loadgameproperties" split=" "/>
+	<cmd name="load登录公告" cmd="loadsyspost" split=" "/>
+	<cmd name="load签到配置" cmd="loadsignin" split=" "/>
+	<cmd name="load关卡配置" cmd="loadcopylevel" split=" "/>
+	<cmd name="load道具配置" cmd="loadgamedata goods" split=" "/>
+	<cmd name="load装备配置" cmd="loadgamedata equips" split=" "/>
+	<cmd name="load元宝商城" cmd="loadmall" split=" "/>
+	<cmd name="load技能配置" cmd="loadgamedata skills" split=" "/>
+	<cmd name="load副将配置" cmd="loadlieutenants" split=" "/>
+	<cmd name="load副将羁绊配置" cmd="loadfetter" split=" "/>
+	<cmd name="load副将任务配置" cmd="loadlieuttasks" split=" "/>
+	<cmd name="load机甲全部配置" cmd="loadmechabase" split=" "/>
+	<cmd name="load机甲等级配置" cmd="loadmechalevel" split=" "/>
+	<cmd name="load电视墙公告配置" cmd="loadtimingscroll" split=" "/>
+	<cmd name="load登陆公告配置" cmd="loadsyspost" split=" "/>
+	<cmd name="load内置充值配置" cmd="loadinteralcharge" split=" "/>
+	<cmd name="load军团XML配置" cmd="loadarmyxml" split=" "/>
+	<cmd name="load军团BOSS配置" cmd="loadarmyboss" split=" "/>
+	<cmd name="loadGM活动配置" cmd="loadgmact 1" split=" "/>
+	<cmd name="load内置活动" cmd="loadactivity" split=" "/>
+	<cmd name="loadVIP配置" cmd="loadvip" split=" "/>
+	<cmd name="loadPVE计时模式" cmd="loadpvetimingmode" split=" "/>
+	<cmd name="loadPVE无限模式" cmd="loadpveunlimitedmode" split=" "/>
+	<cmd name="loadPVEBOSS模式" cmd="loadpvebossmode" split=" "/>
+	<cmd name="loadPVE奖励配置" cmd="loadpveendbouns" split=" "/>
+	<cmd name="load温馨提示配置" cmd="loadwakey" split=" "/>
+	<cmd name="load签到配置" cmd="loadsignin" split=" "/>
+	<cmd name="load客服信息" cmd="loadcustomservice" split=" "/>
+	<cmd name="load语音地址" cmd="loadclientconfig" split=" "/>
+	<cmd name="loadPVP-副将" cmd="loadpvpstriveforlieut" split=" "/>
+	<cmd name="loadPVP比武XML" cmd="loadbiwu 1" split=" "/>
+	<cmd name="loadGameData" cmd="loadgamedata all" split=" "/>
+	<cmd name="load任务奖励提醒" cmd="loadremindfortask" split=" "/>
+	<cmd name="load公会列表" cmd="loadguildlist" split=" "/>
+	<cmd name="服务器之间通信" cmd="tests2s" split=",">
+  		<param name="目标实例号:" default_value="" />
+		<param name="命令:" default_value="" />
+	</cmd>
+	<cmd name="停服" cmd="freeze" split=" "/>
+	
+</cmds>
